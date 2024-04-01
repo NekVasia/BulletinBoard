@@ -1,0 +1,272 @@
+::-webkit-scrollbar {
+    background-color: white;
+    width: 12px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #054970;
+    border-radius: 5px;
+}
+
+/*MAIN*/
+* {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.h1 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.h2 {
+    color: #0EA5E9;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main {
+    max-width: 800px;
+    margin: 100px auto 0;
+}
+
+/*HEADER*/
+.header {
+    min-height: 80px;
+    height: fit-content;
+    background-color: #0EA5E9;;
+    position: absolute;
+}
+
+.header__container {
+    padding-top: 27px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__burger {
+    display: flex;
+}
+
+.header__burger__item {
+    margin-left: 30px;
+}
+
+.header__burger__item:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+    .header__burger {
+        display: none;
+    }
+}
+
+
+/*LOGIN and REGISTRATION*/
+.p__button {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.p__input {
+    margin-top: 8px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.section__container {
+    line-height: 100%;
+    align-self: center;
+}
+
+.section__container_title {
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.section__input {
+    height: 48px;
+    width: 400px;
+}
+
+.section__button {
+    height: 36px;
+    width: 200px;
+    background-color: #0EA5E9;
+}
+
+.section__container__cell {
+    height: 75px;
+    margin: 20px 0;
+}
+
+.section__container__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 93px;
+    margin: 20px 0;
+}
+
+
+/*product*/
+
+.product {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px 30px;
+}
+
+.product__block {
+    display: flex;
+    flex-direction: column;
+    border: red 1px solid;
+    justify-content: space-between;
+}
+
+.product__block1 {
+    display: flex;
+    flex-direction: column;
+    border: red 1px solid;
+    justify-content: space-between;
+}
+
+.product__block__grow {
+    flex-grow: 100;
+}
+
+.product__cell {
+    display: flex;
+    flex-direction: row;
+    border: green 1px solid;
+    flex-grow: 100;
+    justify-content: space-between;
+}
+
+.product__image {
+    height: 150px;
+    width: 150px;
+    border: blue 1px solid;
+}
+
+.product__image-fit {
+    width: 100%;
+    object-fit: contain;
+}
+
+.product__phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+    border: 1px solid #0EA5E9;
+    background: #0EA5E9;
+}
+
+.product__cell__description {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.product__create__button {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 100px 20px 30px;
+}
+
+.product__about {
+    margin-top: 10px;
+}
+
+.product__sum {
+    height: 30px;
+    width: 120px;
+    text-align: end;
+}
+
+.product__name {
+    margin: 10px 20px 0 20px;
+}
+
+.product__button {
+    display: flex;
+    justify-content: end;
+}
+
+.button {
+    height: 30px;
+    width: 150px;
+    margin-left: 17px;
+    border: 1px solid #0EA5E9;
+    background: #0EA5E9;
+}
+
+/*create_product*/
+
+.product__create {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 20px 30px;
+}
+
+.section__input__create {
+    width: 100%;
+    height: max-content;
+}
+
+.input__create {
+    height: 45px;
+    width: 100%;
+}
+
+.input__create__about {
+    height: 150px;
+    width: 100%;
+}
+
+.section__picture {
+    display: flex;
+    margin-top: 30px;
+}
+
+.section__save {
+    display: flex;
+    margin-top: 30px;
+}
+
+.button__save {
+    height: 30px;
+    width: 150px;
+    border: 1px solid #0EA5E9;
+    background: #0EA5E9;
+}
