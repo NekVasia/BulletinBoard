@@ -3,7 +3,7 @@
 @section('title', 'Добавление объявления :: Мои объявления')
 
 @section('content')
-<form action="{{ route('bb.store') }}" method="POST">
+<form action="{{ route('bb.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="section__input__create">
         <p class="p__input">Название:</p>
@@ -27,11 +27,11 @@
         @enderror
     </div>
     <div class="section__picture">
-        <input name="image" id="txtImage" class="product__image @error('title') is-invalid @enderror" value="{{ old('image') }}">
+        <picture name="image" id="txtImage" class="product__image @error('title') is-invalid @enderror" value="{{ old('image') }}">
         @error('image')
         <div class="invalid-feedback">{{ $message }}</div>
         @enderror
-        <button class="button">Загрузить фото</button>
+        <input type="file" name="image" class="button">
     </div>
     <div class="section__save">
         <input type="submit" class="button__save" value="Сохранить">

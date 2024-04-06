@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <title>@yield('title') : : BulletinBoard</title>
-    <link href="/resources/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/styles/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header class="header">

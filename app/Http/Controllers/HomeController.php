@@ -33,7 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return view('product', ['bbs' => Auth::user()->bbs()->latest()->get()]);
+        return view('product', ['bbs' => Auth::user()->bbs()->latest()->get()]);
     }
 
     public function show()
