@@ -27,11 +27,13 @@
         @enderror
     </div>
     <div class="section__picture">
-        <picture name="image" id="txtImage" class="product__image @error('title') is-invalid @enderror" value="{{ old('image') }}">
+        <div class="product__image">
+            <img class="product__image" src="{{ "Предпросмотр изображения" }}">
+        </div>
+        <input type="file" name="image" class="button">
         @error('image')
         <div class="invalid-feedback">{{ $message }}</div>
         @enderror
-        <input type="file" name="image" class="button">
     </div>
     <div class="section__save">
         <input type="submit" class="button__save" value="Сохранить">

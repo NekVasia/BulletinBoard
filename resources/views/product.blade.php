@@ -7,7 +7,9 @@
         @foreach($bbs as $bb)
         <section class="product">
             <div class="product__block">
-                <div class="product__image">{{ $bb->image }}</div>
+                <div class="product__image">
+                    <img class="product__image" src="{{ Storage::url($bb->image) }}">
+                </div>
                 <button class="product__phone">{{ $bb->user->phone }}</button>
             </div>
             <div class="product__block product__block__grow">

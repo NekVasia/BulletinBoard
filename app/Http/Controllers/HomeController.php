@@ -49,13 +49,14 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate(self::BB_VALIDATOR);
+        $path = $request->file('image')->store('uploads', 'public');
         Auth::user()->bbs()->create([
             'title' => $validated['title'],
             'content' => $validated['content'],
             'price' => $validated['price'],
-            'image' => $validated['image']
+            'image' => $path
         ]);
-        return redirect()->route('product');
+        return redirect()->route('bb.create', ['path' => $path]);
     }
 
     public function edit(Bb $bb)
