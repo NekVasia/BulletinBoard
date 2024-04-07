@@ -56,7 +56,7 @@ class HomeController extends Controller
             'price' => $validated['price'],
             'image' => $path
         ]);
-        return redirect()->route('bb.create', ['path' => $path]);
+        return redirect()->route('my_product');
     }
 
     public function edit(Bb $bb)
@@ -67,14 +67,27 @@ class HomeController extends Controller
     public function update(Request $request, Bb $bb)
     {
         $validated = $request->validate(self::BB_VALIDATOR);
-        $bb->fill([
+//        $path = $request->file('image')->store('uploads', 'public');
+//        $bb->fill([
+//            'title' => $validated['title'],
+//            'content' => $validated['content'],
+//            'price' => $validated['price'],
+//            'image' => $path
+//        ]);
+        if ($request->file('image')) {
+            $path = $request->file('image')->store('uploads', 'public');
+        }
+        $array = [
             'title' => $validated['title'],
             'content' => $validated['content'],
-            'price' => $validated['price'],
-            'image' => $validated['image']
-        ]);
+            'price' => $validated['price']
+        ];
+        if (isset($path)) {
+            $array['image'] = $path;
+        }
+        $bb->fill($array);
         $bb->save();
-        return redirect()->route('product');
+        return redirect()->route('my_product');
     }
 
     public function delete(Bb $bb)
